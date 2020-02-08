@@ -14,25 +14,219 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L teensy-breakout:TEENSY_3.2 U?
+L teensy-breakout:TEENSY_3.2 U1
 U 1 1 5E4C5F79
-P 4000 3700
-F 0 "U?" H 4000 4665 50  0000 C CNN
-F 1 "TEENSY_3.2" H 4000 4574 50  0000 C CNN
-F 2 "" H 4000 3700 50  0001 C CNN
-F 3 "" H 4000 3700 50  0001 C CNN
-	1    4000 3700
+P 3500 3650
+F 0 "U1" H 3500 4615 50  0000 C CNN
+F 1 "TEENSY_3.2" H 3500 4524 50  0000 C CNN
+F 2 "" H 3500 3650 50  0001 C CNN
+F 3 "" H 3500 3650 50  0001 C CNN
+	1    3500 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L ce-header:CE_HEADER U?
+L ce-header:CE_HEADER U2
 U 1 1 5E4C70BC
-P 8150 3800
-F 0 "U?" H 8150 5181 50  0000 C CNN
-F 1 "CE_HEADER" H 8150 5090 50  0000 C CNN
-F 2 "" H 8150 3700 50  0001 C CNN
-F 3 "" H 8150 3700 50  0001 C CNN
-	1    8150 3800
+P 7650 3750
+F 0 "U2" H 8200 5050 50  0000 C CNN
+F 1 "CE_HEADER" H 8350 4950 50  0000 C CNN
+F 2 "" H 7650 3650 50  0001 C CNN
+F 3 "" H 7650 3650 50  0001 C CNN
+	1    7650 3750
 	1    0    0    -1  
 $EndComp
+Text Label 5150 3150 0    50   ~ 0
+3.3V
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 5E3ECD4D
+P 6150 2300
+F 0 "J1" H 6258 2581 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 6258 2490 50  0000 C CNN
+F 2 "" H 6150 2300 50  0001 C CNN
+F 3 "~" H 6150 2300 50  0001 C CNN
+	1    6150 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2550 7350 2300
+Wire Wire Line
+	7350 2300 6350 2300
+Wire Wire Line
+	7950 2550 7950 2300
+Text Label 7950 2300 1    50   ~ 0
+3.3V
+Text Label 5150 2950 0    50   ~ 0
+5V
+Wire Wire Line
+	6350 2400 6550 2400
+Wire Wire Line
+	6350 2200 6550 2200
+Text Label 6550 2200 0    50   ~ 0
+3.3V
+Text Label 6550 2400 0    50   ~ 0
+5V
+Wire Wire Line
+	7350 4850 7350 5000
+Text Label 7350 5200 3    50   ~ 0
+GND
+Wire Wire Line
+	7950 4850 7950 5000
+Wire Wire Line
+	7950 5000 7350 5000
+Connection ~ 7350 5000
+Wire Wire Line
+	7350 5000 7350 5200
+Text Label 1900 2950 2    50   ~ 0
+GND
+Wire Wire Line
+	6750 3150 6450 3150
+Wire Wire Line
+	6750 3350 6450 3350
+Wire Wire Line
+	6750 3550 6450 3550
+Wire Wire Line
+	6750 3750 6450 3750
+Text Label 6450 3150 2    50   ~ 0
+SPI_MOSI
+Text Label 6450 3350 2    50   ~ 0
+SPI_MISO
+Text Label 6450 3550 2    50   ~ 0
+SPI_CLK
+Text Label 6450 3750 2    50   ~ 0
+SPI_CS
+Text Label 1850 4050 2    50   ~ 0
+SPI_CS
+Wire Wire Line
+	2100 4050 1850 4050
+Text Label 5150 4250 0    50   ~ 0
+SPI_CLK
+Wire Wire Line
+	4900 4250 5150 4250
+Wire Wire Line
+	2100 4150 1850 4150
+Wire Wire Line
+	2100 4250 1850 4250
+Text Label 1850 4150 2    50   ~ 0
+SPI_MOSI
+Text Label 1850 4250 2    50   ~ 0
+SPI_MISO
+$Comp
+L Device:R R1
+U 1 1 5E3F19B0
+P 9350 3250
+F 0 "R1" V 9250 3200 50  0000 C CNN
+F 1 "0" V 9250 3350 50  0000 C CNN
+F 2 "" V 9280 3250 50  0001 C CNN
+F 3 "~" H 9350 3250 50  0001 C CNN
+	1    9350 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E3F2057
+P 9350 3450
+F 0 "R2" V 9250 3500 50  0000 C CNN
+F 1 "0" V 9250 3350 50  0000 C CNN
+F 2 "" V 9280 3450 50  0001 C CNN
+F 3 "~" H 9350 3450 50  0001 C CNN
+	1    9350 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9500 3250 9700 3250
+Wire Wire Line
+	9500 3450 9700 3450
+Wire Wire Line
+	2100 3050 1900 3050
+Wire Wire Line
+	2100 3150 1900 3150
+Text Label 9700 3250 0    50   ~ 0
+TEENSY_RX
+Text Label 9050 3250 2    50   ~ 0
+DEVICE_TX
+Wire Wire Line
+	8550 3250 9200 3250
+Wire Wire Line
+	8550 3450 9200 3450
+Text Label 9050 3450 2    50   ~ 0
+DEVICE_RX
+Text Label 9700 3450 0    50   ~ 0
+TEENSY_TX
+Text Label 1900 3050 2    50   ~ 0
+TEENSY_RX
+Text Label 1900 3150 2    50   ~ 0
+TEENSY_TX
+Wire Wire Line
+	6750 4050 6450 4050
+Wire Wire Line
+	6750 4250 6450 4250
+Text Label 6450 4050 2    50   ~ 0
+I2C_SCLK
+Text Label 6450 4250 2    50   ~ 0
+I2C_SDAT
+Wire Wire Line
+	4900 3650 5150 3650
+Wire Wire Line
+	4900 3750 5150 3750
+Text Label 5150 3650 0    50   ~ 0
+I2C_SCLK
+Text Label 5150 3750 0    50   ~ 0
+I2C_SDAT
+Wire Wire Line
+	4900 3850 5150 3850
+Wire Wire Line
+	4900 3950 5150 3950
+Wire Wire Line
+	4900 4050 5150 4050
+Wire Wire Line
+	4900 4150 5150 4150
+Wire Wire Line
+	8550 3750 8800 3750
+Wire Wire Line
+	8550 3950 8800 3950
+Wire Wire Line
+	8550 4150 8800 4150
+Wire Wire Line
+	8550 4350 8800 4350
+Text Label 8800 3750 0    50   ~ 0
+AIO_0
+Text Label 8800 3950 0    50   ~ 0
+AIO_1
+Text Label 8800 4150 0    50   ~ 0
+AIO_2
+Text Label 8800 4350 0    50   ~ 0
+AIO_3
+Text Label 5150 4150 0    50   ~ 0
+AIO_0
+Text Label 5150 4050 0    50   ~ 0
+AIO_1
+Text Label 5150 3950 0    50   ~ 0
+AIO_2
+Text Label 5150 3850 0    50   ~ 0
+AIO_3
+NoConn ~ 4900 3250
+NoConn ~ 4900 3350
+NoConn ~ 4900 3450
+NoConn ~ 4900 3550
+NoConn ~ 2100 3250
+NoConn ~ 2100 3350
+NoConn ~ 2100 3450
+NoConn ~ 2100 3550
+NoConn ~ 2100 3650
+NoConn ~ 2100 3750
+NoConn ~ 2100 3850
+NoConn ~ 2100 3950
+NoConn ~ 3500 4550
+NoConn ~ 3600 4550
+NoConn ~ 3700 4550
+NoConn ~ 3400 4550
+NoConn ~ 3300 4550
+NoConn ~ 4900 3050
+Wire Wire Line
+	4900 2950 5150 2950
+Wire Wire Line
+	4900 3150 5150 3150
+Wire Wire Line
+	1900 2950 2100 2950
 $EndSCHEMATC
