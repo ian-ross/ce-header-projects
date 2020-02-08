@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name ce-header)(type KiCad)(uri ${KIPRJMOD}/../ce-header/ce-header.pretty)(options "")(descr ""))
+  (lib (name teensy-breakout)(type KiCad)(uri ${KIPRJMOD}/teensy-breakout.pretty)(options "")(descr ""))
+)

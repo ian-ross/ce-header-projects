@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ce-header)(type Legacy)(uri ${KIPRJMOD}/ce-header.lib)(options "")(descr ""))
+)
