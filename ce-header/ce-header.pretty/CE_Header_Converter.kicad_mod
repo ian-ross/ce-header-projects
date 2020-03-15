@@ -1,4 +1,4 @@
-(module CE_Header_Converter (layer F.Cu) (tedit 5E3ED716)
+(module CE_Header_Converter (layer F.Cu) (tedit 5E47F631)
   (descr "Through hole straight pin header, 2x10, 2.54mm pitch, double rows")
   (tags "Through hole pin header THT 2x10 2.54mm double row")
   (fp_text reference REF** (at 1.27 -2.33) (layer F.SilkS)
@@ -45,8 +45,8 @@
   (pad 4 thru_hole oval (at 0 2.54) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
   (pad 3 thru_hole oval (at 2.54 2.54) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
   (pad 1 thru_hole rect (at 2.54 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
-  (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x10_P2.54mm_Vertical.wrl
-    (at (xyz 0 0 0))
+  (model :ce-header:ce-header-connector.step
+    (offset (xyz 2.54 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
