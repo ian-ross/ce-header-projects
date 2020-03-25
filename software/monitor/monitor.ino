@@ -3,6 +3,8 @@
 
 #include "ce-header-pins.h"
 
+MillaMilla_DS7505 tempsensor = MillaMilla_DS7505();
+
 void setup() {
   Serial.begin(9600);
 
@@ -13,13 +15,12 @@ void setup() {
 }
 
 void loop() {
-  // QUESTION: WHAT'S THE BEST WAY TO DO TIMESTAMPS?  JUST DO THEM ON THE PC?
-  
   int light = analogRead(AIO_0) - analogRead(AIO_1);
   float temp = tempsensor.readTempC();
-  
-  Serial.print(temp);
-  Serial.print(" ");
+
+  Serial.print("T ");
+  Serial.println(temp);
+  Serial.print("L ");
   Serial.println(light);
   delay(1000);
 }
